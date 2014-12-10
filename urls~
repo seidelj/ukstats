@@ -1,0 +1,56 @@
+LLSOA: Owned; total
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125769&enc=1&dsFamilyId=2505
+
+LLSOA: %Males
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125769&enc=1&dsFamilyId=2493
+
+LLSOA: %Christians
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125769&enc=1&dsFamilyId=2579
+
+LLSOA: Density
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125769&enc=1&dsFamilyId=2491
+
+LLSOA: %More than 3 bedrooms (this requires calculations) First row is total
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2556
+
+LLSOA: %English as main language (This requires calculations) First row is total
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2528
+
+LLSOA: % of Lone parents (Unclear how to get at this) Maybe not living in a couple?
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2559
+
+LLSOA: %of household >2 (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2555
+
+LLSOA: %of full time workers (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2574
+
+LLSOA: %of >=4 education (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2514
+
+LLSOA: %of very good health (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2503
+
+LLSOA: %of good health (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2503
+
+LLSOA: %of white (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2575
+
+LLSOA: %of uk citizens (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2525
+
+LLSOA: Average age
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2545
+
+MLSOA: AVERAGE HOUSEHOLD INCOME (req calculation)
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?adminCompAndTimeId=25672%3A279&a=7&b=6279720&c=CM12+9SN&d=140&r=0&e=14&f=21703&o=221&g=6423227&i=1001x1003x1004x1005&l=266&m=0&s=1418141331753&enc=1
+
+LLSOA: Life-satisfaction
+http://opendatacommunities.org/data/wellbeing-lsoa-life-satisfaction-mean
+
+LLSOA: Worthwhile
+http://opendatacommunities.org/data/wellbeing-lsoa-worthwhile-mean
+
+LLSOA: Happy Yesterday
+http://opendatacommunities.org/data/wellbeing-lsoa-happy-yesterday-mean
