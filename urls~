@@ -46,11 +46,11 @@ http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303
 MLSOA: AVERAGE HOUSEHOLD INCOME (req calculation)
 http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?adminCompAndTimeId=25672%3A279&a=7&b=6279720&c=CM12+9SN&d=140&r=0&e=14&f=21703&o=221&g=6423227&i=1001x1003x1004x1005&l=266&m=0&s=1418141331753&enc=1
 
-LLSOA: Life-satisfaction
+OPEN DATA: Life-satisfaction
 http://opendatacommunities.org/data/wellbeing-lsoa-life-satisfaction-mean
 
-LLSOA: Worthwhile
+OPEN DATA: Worthwhile
 http://opendatacommunities.org/data/wellbeing-lsoa-worthwhile-mean
 
-LLSOA: Happy Yesterday
+OPEN DATA: Happy Yesterday
 http://opendatacommunities.org/data/wellbeing-lsoa-happy-yesterday-mean
