@@ -1,4 +1,4 @@
-import os, urllib2, time
+import os, time, urllib2
 from models import Session, CensusData, CensusFields, PostalCode
 
 session = Session()
@@ -27,7 +27,8 @@ def download_pages(fieldinfo):
 
 def download_page(fieldinfo, instance):
 	url_code = str(instance.code).replace(" ", "+").replace(" ","")
-	url = "{}{}{}".format(fieldinfo.prefix, url_code, fieldinfo.postfix)
+	areaid = fieldinfo.layer
+	url = "{}{}{}&b={}&nsjs=true&nsck=false&nssvg=false&nswid=1391".format(fieldinfo.prefix, url_code, fieldinfo.postfix, getattr(instance, areaid))
 	html = None
 	try:
 		response = urllib2.urlopen(url)
@@ -47,7 +48,6 @@ def save_file(html, filename):
 			f.write(html)
 	except IOError:
 		print "Couldn't write to file {}".format(new_file)
-
 
 if __name__ == "__main__":
 	main()

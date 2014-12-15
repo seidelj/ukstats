@@ -1,5 +1,5 @@
-LLSOA: Owned; total
-http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125769&enc=1&dsFamilyId=2505
+LLSOA: %Owned; total
+http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&r=0&e=61&f=33574&o=362&g=6423227&i=1001x1003x1032x1004x1005&l=2505&m=0&s=1418403916624&enc=1&adminCompId=33574&printTable=Print+this+table
 
 LLSOA: %Males
 http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125769&enc=1&dsFamilyId=2493
@@ -40,7 +40,7 @@ http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303
 LLSOA: %of uk citizens (req calculation)
 http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2525
 
-LLSOA: Average age
+LLSOA: Average age  ### HAVING A BRAIN FART RE: HOW TO GET THIS NUMEBR
 http://neighbourhood.statistics.gov.uk/dissemination/LeadTableView.do?a=7&b=6303420&c=CM12+9SL&d=141&e=61&g=6423227&i=1001x1003x1032x1004&m=0&r=0&s=1418151125753&enc=1&dsFamilyId=2545
 
 MLSOA: AVERAGE HOUSEHOLD INCOME (req calculation)

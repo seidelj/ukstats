@@ -7,10 +7,10 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 session = Session()
 
 def main():
-	filename = os.path.join(PROJECT_DIR, 'postalcodes.csv')
-#	import_censusfieldfilename)
+	filename = os.path.join(PROJECT_DIR, 'censusfields.csv')
+	import_censusfield(filename)
 	
-	import_postalcodes(filename)	
+#	import_postalcodes(filename)	
 
 def import_postalcodes(filename):
 	with open(filename, 'rb') as f:
@@ -25,7 +25,7 @@ def import_censusfield(filename):
 		mycsv = csv.reader(f)
 		next(mycsv, None) # Skip headers
 		for row in mycsv:
-			censusfield = CensusFields(fieldname=row[0], totalpos=row[1], fieldpos=row[2], prefix=row[3], postfix=row[4], operation=row[5])
+			censusfield = CensusFields(fieldname=row[0], totalpos=row[1], fieldpos=row[2], prefix=row[3], postfix=row[4], operation=row[5], layer=row[6])
 			session.add(censusfield)
 		session.commit()
 
