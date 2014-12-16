@@ -1,19 +1,54 @@
-import os, re, argparse, os, sys
+import os, re, argparse, os, sys, csv
 from bs4 import BeautifulSoup
 from sqlalchemy import update
-from models import Session, PostalCode, CensusData, CensusFields
+from models import Session, PostalCode, CensusData, CensusFields, SubjectiveMeasure
 from sqlutils import get_or_create
 session = Session()
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+subjective_csv_dict = {
+	'happy_yesterday': 'wellbeing-lsoa-happy-yesterday-mean.csv',
+	'satisfaction': 'wellbeing-lsoa-life-satisfaction-mean.csv',
+	'worthwhile': 'wellbeing-lsoa-worthwhile-mean.csv',
+}
 
 
 def main():
+	pcodes = []
 	for postalcode in session.query(PostalCode).all():
-		parse_pages(postalcode)
+		pcodes.append(postalcode.reference_area)
+	#	parse_pages(postalcode)
 		if not postalcode.reference_area:
 			postalcode.reference_area = get_ref_area(postalcode)
+#	parse_subjective_measures()
 	session.commit()
+	rareas = []
+'''
+	for subj in session.query(SubjectiveMeasure).all():
+		refarea = session.query(PostalCode).filter_by(id=subj.postalcode_id).first()
+		rareas.append(refarea.reference_area)
+	for p in pcodes:
+		if p not in rareas:
+			print p	
+'''
 
+def parse_subjective_measures():
+	for key, value in subjective_csv_dict.items():
+		fieldDir = os.path.join(PROJECT_ROOT, 'subjective')
+		filename = os.path.join(fieldDir, value)
+		print filename
+		with open(filename) as f:
+			fieldValue = parse_csv(f, key)
+
+def parse_csv(f, field):
+	mycsv = csv.reader(f)
+	next(mycsv, None)
+	for row in mycsv:
+		ref_area = str(row[1]).replace(" ", "_")
+		postalcode = session.query(PostalCode).filter_by(reference_area=ref_area).first()
+		if postalcode:
+			subjective_measure, created = get_or_create(session, SubjectiveMeasure, postalcode_id = postalcode.id)
+			session.query(SubjectiveMeasure).filter(SubjectiveMeasure.id==subjective_measure.id).update({field: row[2]})
+	
 def parse_pages(postalcode):
 	for instance in session.query(CensusFields).all():
 		fieldDir = os.path.join(PROJECT_ROOT, instance.fieldname)

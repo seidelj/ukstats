@@ -41,9 +41,9 @@ class CensusData(Base):
 class SubjectiveMeasure(Base):
 	__tablename__ = 'subjectivemeasure'
 	id = Column(Integer, Sequence("subjectivemeasure_id_seq"), primary_key=True)
-	satisfaction = Column(Integer)
-	worthwhile = Column(Integer)
-	happy_yesterday = Column(Integer)
+	satisfaction = Column(String)
+	worthwhile = Column(String)
+	happy_yesterday = Column(String)
 	postalcode_id = Column(Integer, ForeignKey('postalcode.id'))
 
 	postalcode = relationship('PostalCode', backref=backref('subjectivemeasure', order_by=id))
