@@ -19,7 +19,7 @@ def main():
 	#	parse_pages(postalcode)
 		if not postalcode.reference_area:
 			postalcode.reference_area = get_ref_area(postalcode)
-#	parse_subjective_measures()
+	parse_subjective_measures()
 	session.commit()
 	rareas = []
 '''
@@ -35,7 +35,6 @@ def parse_subjective_measures():
 	for key, value in subjective_csv_dict.items():
 		fieldDir = os.path.join(PROJECT_ROOT, 'subjective')
 		filename = os.path.join(fieldDir, value)
-		print filename
 		with open(filename) as f:
 			fieldValue = parse_csv(f, key)
 
@@ -44,10 +43,11 @@ def parse_csv(f, field):
 	next(mycsv, None)
 	for row in mycsv:
 		ref_area = str(row[1]).replace(" ", "_")
-		postalcode = session.query(PostalCode).filter_by(reference_area=ref_area).first()
+		postalcode = session.query(PostalCode).filter_by(reference_area=ref_area).all()
 		if postalcode:
-			subjective_measure, created = get_or_create(session, SubjectiveMeasure, postalcode_id = postalcode.id)
-			session.query(SubjectiveMeasure).filter(SubjectiveMeasure.id==subjective_measure.id).update({field: row[2]})
+			for item in postalcode:
+				subjective_measure, created = get_or_create(session, SubjectiveMeasure, postalcode_id = item.id)
+				session.query(SubjectiveMeasure).filter(SubjectiveMeasure.id==subjective_measure.id).update({field: row[2]})
 	
 def parse_pages(postalcode):
 	for instance in session.query(CensusFields).all():
